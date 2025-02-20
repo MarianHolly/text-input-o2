@@ -1,0 +1,13 @@
+@use 'variables' as *;
+
+@mixin input-form-danger {
+    border-color: $surface-danger;
+    background-color: $surface-danger-variant;
+    color: $content-on-neutral-danger;
+}
+
+@mixin input-form-warning {
+    border-color: $surface-warning;
+    background-color: $surface-warning-variant;
+    color: $content-on-neutral-warning;   
+}
