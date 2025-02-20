@@ -1,0 +1,55 @@
+@use "sass:math";
+@use "variables" as *;
+
+.text-input {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: $dimension-xs;
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: math.div($dimension-xs, 2);
+    
+    .label {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: $dimension-xs;
+
+      .text-label {
+        font-size: $label-m-size;
+        font-weight: $label-m-weight;
+        line-height: $label-m-line-height;
+        letter-spacing: $label-m-letter-spc;
+        color: $content-on-neutral-xx-high;
+      }
+
+      .text-optional {
+        font-size: $label-s-size;
+        font-weight: $label-s-weight;
+        line-height: $label-s-line-height;
+        letter-spacing: $label-s-letter-spc;
+        color: $content-on-neutral-low;
+      }
+
+      .text-description {
+        font-size: $body-s-size;
+        font-weight: $body-s-weight;
+        line-height: $body-s-line-height;
+        letter-spacing: $body-s-letter-spc;
+        color: $content-on-neutral-x-high;
+      }
+    }
+  }
+
+  .input-form {
+    width: 400px;
+    height: $dimension-s * 4;
+  }
+}
