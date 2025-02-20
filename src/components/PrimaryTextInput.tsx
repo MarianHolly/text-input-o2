@@ -6,17 +6,24 @@ export default function PrimaryTextInput({
   optional,
   description,
   placeholder,
+  state = "default",
 }: TextInputProps): JSX.Element {
   return (
     <div className="text-input">
       <div className="header">
         <div className="label">
           <label className="label-text">{label}</label>
-          <label className="label-optional">{optional}</label>
+          {optional && <label className="label-optional">{optional}</label>}
         </div>
-        <label className="label-description">{description}</label>
+        {description && <p className="label-description">{description}</p>}
       </div>
-      <input type="text" className="input-form" placeholder={placeholder} />
+      <input
+        type="text"
+        className={`input-form ${
+          state !== "default" ? `input-form-${state}` : ""
+        }`}
+        placeholder={placeholder}
+      />
     </div>
   );
 }
