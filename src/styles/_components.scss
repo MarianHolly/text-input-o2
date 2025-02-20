@@ -14,7 +14,7 @@
     align-items: start;
     justify-content: center;
     gap: math.div($dimension-xs, 2);
-    
+
     .label {
       display: flex;
       flex-direction: row;
@@ -22,7 +22,7 @@
       justify-content: center;
       gap: $dimension-xs;
 
-      .text-label {
+      .label-text {
         font-size: $label-m-size;
         font-weight: $label-m-weight;
         line-height: $label-m-line-height;
@@ -30,7 +30,7 @@
         color: $content-on-neutral-xx-high;
       }
 
-      .text-optional {
+      .label-optional {
         font-size: $label-s-size;
         font-weight: $label-s-weight;
         line-height: $label-s-line-height;
@@ -38,7 +38,7 @@
         color: $content-on-neutral-low;
       }
 
-      .text-description {
+      .label-description {
         font-size: $body-s-size;
         font-weight: $body-s-weight;
         line-height: $body-s-line-height;
@@ -51,5 +51,20 @@
   .input-form {
     width: 400px;
     height: $dimension-s * 4;
+    padding: $dimension-s $dimension-xs;
+
+    border: 1px solid $surface-x-high;
+    border-radius: $dimension-radius-input;
+    background-color: $surface-x-low;
+    caret-color: $surface-brand;
+
+    font-size: $body-m-size;
+    font-weight: $body-m-weight;
+    color: $content-on-neutral-x-high;
+    line-height: $body-line-height;
+    letter-spacing: $body-m-letter-spc;
+
+    outline: none;
+    transition: all 0.08s ease-in-out;
   }
 }
