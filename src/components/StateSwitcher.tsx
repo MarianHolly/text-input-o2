@@ -9,7 +9,6 @@ export default function StateSwitcher({
     <div
       style={{
         width: "100%",
-        margin: "35px",
         display: "flex",
         justifyContent: "center",
         flexDirection: "row",

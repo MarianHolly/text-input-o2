@@ -1,6 +1,8 @@
 import { useState } from "react";
-import PrimaryTextInput from "./components/PrimaryTextInput";
+
+// Components
 import StateSwitcher from "./components/StateSwitcher";
+import PrimaryTextInput from "./components/PrimaryTextInput";
 
 function App() {
   const [state, setState] = useState("default");
