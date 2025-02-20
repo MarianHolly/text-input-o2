@@ -1,7 +1,14 @@
+import PrimaryTextInput from "./components/PrimaryTextInput";
+
 function App() {
   return (
     <div className="App">
-      <h1>Hello World</h1>
+      <PrimaryTextInput
+        label={"Input"}
+        optional={"Optional"}
+        description={"Description for input."}
+        placeholder={"Placeholder"}
+      />
     </div>
   );
 }

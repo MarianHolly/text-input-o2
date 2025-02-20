@@ -1,14 +1,22 @@
-export default function PrimaryTextInput() {
+import { JSX } from "react";
+import { TextInputProps } from "../types";
+
+export default function PrimaryTextInput({
+  label,
+  optional,
+  description,
+  placeholder,
+}: TextInputProps): JSX.Element {
   return (
     <div className="text-input">
       <div className="header">
         <div className="label">
-          <label className="label-text">Label</label>
-          <label className="label-optional">Optional</label>
+          <label className="label-text">{label}</label>
+          <label className="label-optional">{optional}</label>
         </div>
-        <label className="label-description">Description</label>
+        <label className="label-description">{description}</label>
       </div>
-      <input type="text" className="input-form" placeholder="Placeholder" />
+      <input type="text" className="input-form" placeholder={placeholder} />
     </div>
   );
 }
