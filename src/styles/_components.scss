@@ -1,5 +1,6 @@
 @use "sass:math";
 @use "variables" as *;
+@use "mixins" as *;
 
 .text-input {
   display: flex;
@@ -66,5 +67,31 @@
 
     outline: none;
     transition: all 0.08s ease-in-out;
+
+    &:hover {
+      border-color: $state-default-hover;
+    }
+
+    &:focus {
+      border-color: $state-default-focus;
+      box-shadow: inset 0 0 0 2px $state-default-focus;
+    }
+
+    &::placeholder {
+      color: rgba($content-on-neutral-low, 0.6);
+      transition: opacity 0.2s ease-in-out;
+    }
+
+    &:focus::placeholder {
+      opacity: 0;
+    }
+
+    &.input-form-danger {
+      @include input-form-danger;
+    }
+
+    &.input-form-warning {
+      @include input-form-warning;
+    }
   }
 }

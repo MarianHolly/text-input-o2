@@ -1,13 +1,21 @@
-@use 'variables' as *;
+@use "variables" as *;
 
 @mixin input-form-danger {
-    border-color: $surface-danger;
-    background-color: $surface-danger-variant;
-    color: $content-on-neutral-danger;
+  border-color: $surface-danger;
+  background-color: $surface-danger-variant;
+  color: $content-on-neutral-danger;
+  
+  &:focus {
+    box-shadow: inset 0 0 0 2px $surface-danger;
+  }
 }
 
 @mixin input-form-warning {
-    border-color: $surface-warning;
-    background-color: $surface-warning-variant;
-    color: $content-on-neutral-warning;   
+  border-color: $surface-warning;
+  background-color: $surface-warning-variant;
+  color: $content-on-neutral-warning;
+
+  &:focus {
+    box-shadow: inset 0 0 0 2px $surface-warning;
+  }
 }
