@@ -1,5 +1,6 @@
 import { JSX } from "react";
 import { TextInputProps } from "../types";
+import styles from "./PrimaryTextInput.module.scss"
 
 export default function PrimaryTextInput({
   label,
@@ -19,7 +20,7 @@ export default function PrimaryTextInput({
       </div>
       <input
         type="text"
-        className={`input-form ${
+        className={`${styles.inputForm} ${
           state !== "default" ? `input-form-${state}` : ""
         }`}
         placeholder={placeholder}
