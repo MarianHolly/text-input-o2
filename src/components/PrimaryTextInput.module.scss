@@ -1,0 +1,50 @@
+@use "sass:math";
+@use "../styles/variables" as *;
+@use "../styles/mixins" as *;
+
+
+.inputForm {
+    width: 400px;
+    height: $dimension-s * 4;
+    padding: $dimension-s $dimension-xs;
+
+    border: 1px solid $surface-x-high;
+    border-radius: $dimension-radius-input;
+    background-color: $surface-x-low;
+    caret-color: $surface-brand;
+
+    font-size: $body-m-size;
+    font-weight: $body-m-weight;
+    color: $content-on-neutral-x-high;
+    line-height: $body-line-height;
+    letter-spacing: $body-m-letter-spc;
+
+    outline: none;
+    transition: all 0.08s ease-in-out;
+
+    &:hover {
+      border-color: $state-default-hover;
+    }
+
+    &:focus {
+      border-color: $state-default-focus;
+      box-shadow: inset 0 0 0 2px $state-default-focus;
+    }
+
+    &::placeholder {
+      color: rgba($content-on-neutral-low, 0.6);
+      transition: opacity 0.2s ease-in-out;
+    }
+
+    &:focus::placeholder {
+      opacity: 0;
+    }
+
+    &.input-form-danger {
+      @include input-form-danger;
+    }
+
+    &.input-form-warning {
+      @include input-form-warning;
+    }
+  }
