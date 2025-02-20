@@ -3,5 +3,5 @@ export interface TextInputProps {
   optional?: string;
   description?: string;
   placeholder: string;
-  state?: "default" | "warning" | "danger";
+  state?: string
 }
