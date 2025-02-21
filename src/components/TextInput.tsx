@@ -1,7 +1,7 @@
 import { JSX } from "react";
 import { TextInputProps } from "../types";
 
-export default function PrimaryTextInput({
+export default function TextInput({
   label,
   optional,
   description,

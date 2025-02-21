@@ -2,7 +2,7 @@ import { useState } from "react";
 
 // Components
 import StateSwitcher from "./components/StateSwitcher";
-import PrimaryTextInput from "./components/PrimaryTextInput";
+import TextInput from "./components/TextInput";
 
 function App() {
   const [state, setState] = useState("default");
@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <StateSwitcher handleClick={handleClick} />
-      <PrimaryTextInput
+      <TextInput
         label={"Input"}
         optional={"Optional"}
         description={"Description for input."}
