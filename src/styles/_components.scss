@@ -37,7 +37,6 @@
         line-height: $label-s-line-height;
         letter-spacing: $label-s-letter-spc;
         color: $content-on-neutral-low;
-        
       }
 
       .label-description {
@@ -94,7 +93,7 @@
 
     &.input-form-danger {
       @include input-form-danger;
-      
+
       input {
         color: $content-on-neutral-danger;
       }
@@ -133,10 +132,10 @@
       border-radius: $dimension-radius-input;
       width: 32px;
       height: 32px;
-      
+
       &:hover {
         background-color: rgba(184, 182, 182, 0.777);
-        opacity: 40%
+        opacity: 40%;
       }
     }
   }

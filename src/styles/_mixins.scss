@@ -4,7 +4,7 @@
   border-color: $surface-danger;
   background-color: $surface-danger-variant;
   color: $content-on-neutral-danger;
-  
+
   &:focus-within {
     border-color: $surface-danger;
     box-shadow: inset 0 0 0 2px $surface-danger;
@@ -15,7 +15,6 @@
   border-color: $surface-warning;
   background-color: $surface-warning-variant;
   color: $content-on-neutral-warning;
-  
 
   &:focus-within {
     border-color: $surface-warning;
