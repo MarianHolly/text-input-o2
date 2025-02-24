@@ -1,7 +1,7 @@
 import { JSX } from "react";
 import { TextInputProps } from "../types";
 
-export default function PrimaryTextInput({
+export default function TextInput({
   label,
   optional,
   description,
@@ -17,13 +17,26 @@ export default function PrimaryTextInput({
         </div>
         {description && <p className="label-description">{description}</p>}
       </div>
-      <input
-        type="text"
+
+      <div
         className={`input-form ${
           state !== "default" ? `input-form-${state}` : ""
         }`}
-        placeholder={placeholder}
-      />
+      >
+        <input
+          type="text"
+          className="input-form__form"
+          placeholder={placeholder}
+        />
+        <button
+          className="input-form__alert"
+          style={
+            state === "default"
+              ? { visibility: "collapse" }
+              : { visibility: "visible" }
+          }
+        ></button>
+      </div>
     </div>
   );
 }

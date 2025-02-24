@@ -2,22 +2,34 @@ import { useState } from "react";
 
 // Components
 import StateSwitcher from "./components/StateSwitcher";
-import PrimaryTextInput from "./components/PrimaryTextInput";
+import TextInput from "./components/TextInput";
 
 function App() {
   const [state, setState] = useState("default");
+  const [description, setDescription] = useState("");
 
   const handleClick = (currentState: string) => {
     setState(currentState);
   };
 
+  const showDescription = () => {
+    if (description === "") {
+      setDescription("This is a description.");
+    } else {
+      setDescription("");
+    }
+  };
+
   return (
     <div className="App">
-      <StateSwitcher handleClick={handleClick} />
-      <PrimaryTextInput
+      <StateSwitcher
+        handleClick={handleClick}
+        showDescription={showDescription}
+      />
+      <TextInput
         label={"Input"}
         optional={"Optional"}
-        description={"Description for input."}
+        description={description}
         placeholder={"Placeholder"}
         state={state}
       />
