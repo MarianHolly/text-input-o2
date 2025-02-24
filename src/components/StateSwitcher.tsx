@@ -1,7 +1,8 @@
 export default function StateSwitcher({
-  handleClick,
+  handleClick, showDescription,
 }: {
   handleClick: (state: string) => void;
+  showDescription: () => void;
 }) {
   let states = ["default", "warning", "danger"];
 
@@ -34,6 +35,20 @@ export default function StateSwitcher({
           </button>
         );
       })}
+      <button
+        style={{
+          backgroundColor: "#f4f4f4",
+          padding: "4px",
+          marginBottom: "10px",
+          border: "none",
+          borderRadius: "5px",
+          cursor: "pointer",
+          textTransform: 'capitalize',
+        }}
+        onClick={() => showDescription()}
+      >
+        Description
+      </button>
     </div>
   );
 }
