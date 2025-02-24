@@ -15,7 +15,7 @@ export default function TextInput({
           <label className="label-text">{label}</label>
           {optional && <label className="label-optional">{optional}</label>}
         </div>
-        {description && <p className="label-description">{description}</p>}
+        {description && <span className="label-description">{description}</span>}
       </div>
 
       <div

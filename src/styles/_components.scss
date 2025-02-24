@@ -38,14 +38,14 @@
         letter-spacing: $label-s-letter-spc;
         color: $content-on-neutral-low;
       }
+    }
 
-      .label-description {
-        font-size: $body-s-size;
-        font-weight: $body-s-weight;
-        line-height: $body-s-line-height;
-        letter-spacing: $body-s-letter-spc;
-        color: $content-on-neutral-x-high;
-      }
+    .label-description {
+      font-size: $body-s-size;
+      font-weight: $body-s-weight;
+      line-height: $body-s-line-height;
+      letter-spacing: $body-s-letter-spc;
+      color: $content-on-neutral-x-high;
     }
   }
 
@@ -67,7 +67,8 @@
 
     display: flex;
     align-items: center;
-    padding: 0 10px;
+    padding: $dimension-xs $dimension-s;
+    gap: $dimension-xs;
     position: relative;
 
     outline: none;
@@ -129,9 +130,8 @@
       cursor: pointer;
       border: none;
       background: transparent;
-      border-radius: $dimension-radius-input;
-      width: 32px;
-      height: 32px;
+      width: $dimension-3xl;
+      height: $dimension-3xl;
 
       &:hover {
         background-color: rgba(184, 182, 182, 0.777);
