@@ -18,5 +18,4 @@ The component supports three states:
 2. warning - Yellow highlighting for warning conditions
 3. danger - Red highlighting for error conditions
 
-[![Watch the video](/public/video.webm)](/public/video.webm)
-
+![Image](/public/showcase.png)
